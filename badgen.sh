@@ -5,7 +5,7 @@
 
 # Define file paths and parameters
 CSV_FILENAME="data.csv"
-BADGE_TEMPLATE_FILENAME="badge_template.jpg"
+BADGE_TEMPLATE_FILENAME="badge_template.png"
 QRCODE_OFFSET_X_Y=(-300+670) # FORMAT: +XXX-YYY
 QRCODE_SIZE="250x250"         # FORMAT: 800x800
 TEXT1_OFFSET_X_Y=(+00-100)
