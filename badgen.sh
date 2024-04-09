@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Bash badge generator
+# Bash Bad Badge Generator
+# Based on Badge Generator 2018 by https://github.com/ibrah
 # Usage: ./badgen.sh data.csv badge_template.png +700-1650 800x800 0,-650 didactgothic-regular.ttf
 
 # Define file paths and parameters
