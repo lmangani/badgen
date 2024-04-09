@@ -8,8 +8,5 @@ Badge Generator for OSS Conferences
 ### Usage
 
 - Add your participants _(data.csv)_
-- Add your badge template image (badge_template.png)_
-- Execute the script
-```
-./badgen.sh
-```
+- Add your badge template image _(badge_template.png)_
+- Execute the script `./badgen.sh`
