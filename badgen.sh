@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Bash Bad Badge Generator
-# Based on Badge Generator 2018 by https://github.com/ibrah
+# Bash Bad Badge Generator. Based on Badge Generator 2018 by https://github.com/ibrah
 # Usage: ./badgen.sh data.csv badge_template.png +700-1650 800x800 0,-650 didactgothic-regular.ttf
 
 # Define file paths and parameters
@@ -16,9 +15,11 @@ TEXT2_FONT_FILENAME="fonts/StagSans-Medium.otf"
 TEXT3_OFFSET_X_Y=(+00+200)
 TEXT3_FONT_FILENAME="fonts/StagSans-Light.otf"
 TEXT4_OFFSET_X_Y=(+00+350)
-TEXT4_FONT_FILENAME="fonts/StagSans-Light.otf"
+TEXT4_FONT_FILENAME="fonts/StagSans-Medium.otf"
 TEXT_SIZE=130
+SUBTEXT_SIZE=80
 TEXT_COLOR="black"
+SUBTEXT_COLOR="blue"
 
 # Counter initialization
 counter=1
@@ -38,8 +39,8 @@ while IFS=";" read f1 f2 f3 f4 f5 f6 f7 f8; do
         # Insert participant details
         convert -font "$TEXT1_FONT_FILENAME" -fill "$TEXT_COLOR" -pointsize "$TEXT_SIZE" -gravity center -quality 100 -draw "text ${TEXT1_OFFSET_X_Y[@]} '${f1}'" out/result.png out/result_withtext1_${counter}.png
         convert -font "$TEXT2_FONT_FILENAME" -fill "$TEXT_COLOR" -pointsize "$TEXT_SIZE" -gravity center -quality 100 -draw "text ${TEXT2_OFFSET_X_Y[@]} '${f2}'" out/result_withtext1_${counter}.png out/result_withtext2_${counter}.png
-        convert -font "$TEXT3_FONT_FILENAME" -fill "$TEXT_COLOR" -pointsize "$TEXT_SIZE" -gravity center -quality 100 -draw "text ${TEXT3_OFFSET_X_Y[@]} '${f3}'" out/result_withtext2_${counter}.png out/result_withtext3_${counter}.png
-        convert -font "$TEXT4_FONT_FILENAME" -fill "$TEXT_COLOR" -pointsize "$TEXT_SIZE" -gravity center -quality 100 -draw "text ${TEXT4_OFFSET_X_Y[@]} '${f4}'" out/result_withtext3_${counter}.png out/result_withtext4_${counter}.png
+        convert -font "$TEXT3_FONT_FILENAME" -fill "$TEXT_COLOR" -pointsize "$SUBTEXT_SIZE" -gravity center -quality 100 -draw "text ${TEXT3_OFFSET_X_Y[@]} '${f3}'" out/result_withtext2_${counter}.png out/result_withtext3_${counter}.png
+        convert -font "$TEXT4_FONT_FILENAME" -fill "$SUBTEXT_COLOR" -pointsize "$SUBTEXT_SIZE" -gravity center -quality 100 -draw "text ${TEXT4_OFFSET_X_Y[@]} '${f4}'" out/result_withtext3_${counter}.png out/result_withtext4_${counter}.png
 
         # Convert to PDF for printing
         convert out/result_withtext4_${counter}.png -quality 100 out/result_withtext4_${counter}.pdf
