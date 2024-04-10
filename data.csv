@@ -1,3 +1,3 @@
-﻿First Name;Last Name;Company;Country;Phonenumber;Mail;First%20Name;Last%20Name
-Lorem1;Ipsum1;CompanyName1;Italy;123456789;lorem1@ipsum1.com;lorem1;Ipsum1
-Lorem2;Ipsum2;CompanyName2;Netherlands;123456789;lorem2@ipsum2.com;lorem2;Ipsum2
+﻿First Name;Last Name;Company;Role;Phonenumber;Mail;First%20Name;Last%20Name
+Lorem1;Ipsum1;CompanyName1;Speaker;123456789;lorem1@ipsum1.com;lorem1;Ipsum1
+Lorem2;Ipsum2;CompanyName2;Sponsor;123456789;lorem2@ipsum2.com;lorem2;Ipsum2
